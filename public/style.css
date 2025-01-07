@@ -1,0 +1,91 @@
+/* 스타일은 그대로 유지 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.query-input, .query-result {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.query-input {
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+}
+
+textarea {
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 300px; /* 높이를 300px로 설정하여 더 크게 만듬 */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical; /* 수직으로만 크기 조정 가능 */
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.query-result {
+    background-color: #ffffff;
+    border-left: 1px solid #ccc;
+}
+
+#result-table {
+    margin-top: 20px;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

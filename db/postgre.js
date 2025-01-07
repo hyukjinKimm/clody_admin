@@ -20,7 +20,21 @@ const testDBConnection = async () => {
     }
 };
 
+// 쿼리 실행 함수
+const executeQuery = async (query) => {
+    try {
+        const result = await pool.query(query);
+        const columns = result.fields.map(field => field.name);
+        const rows = result.rows.map(row => Object.values(row));
+
+        return { columns, rows };
+    } catch (err) {
+        throw new Error('쿼리 실행에 실패했습니다.');
+    }
+};
+
 module.exports = {
     pool,
     testDBConnection,
+    executeQuery,
 };
