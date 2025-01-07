@@ -1,20 +1,19 @@
-require('dotenv').config(); // .env 파일 로드
-
 const express = require('express');
+const { testDBConnection } = require('./db/postgre'); // 데이터베이스 모듈 가져오기
+
 const app = express();
-
-// 환경 변수 가져오기
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || '127.0.0.1';
 
-// 기본 라우트 설정
+// 미들웨어 설정
+app.use(express.json()); // JSON 요청 파싱
+
+// 기본 라우트
 app.get('/', (req, res) => {
-    res.send(`
-        hello world
-    `);
+    res.send('<h1>Welcome to the Express Server with PostgreSQL!</h1>');
 });
 
-// 서버 실행
-app.listen(PORT, HOST, () => {
-    console.log(`Server is running at http://${HOST}:${PORT}`);
+// 서버 실행 및 PostgreSQL 연결 테스트
+app.listen(PORT, async () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+    await testDBConnection(); // PostgreSQL 연결 테스트
 });
