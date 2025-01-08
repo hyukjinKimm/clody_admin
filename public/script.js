@@ -195,7 +195,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const data = await response.json();
 
                 if (data.success) {
-                    console.log(data.diaries)
                     displayDiariesResult(data.diaries); // 성공 시 결과 출력
                 } else {
                     alert(data.message); // 실패 시 메시지 출력
