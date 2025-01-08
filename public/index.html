@@ -10,18 +10,33 @@
     <div class="container">
         <!-- 왼쪽: 쿼리 입력 -->
         <div class="query-input">
-            <h2>쿼리 입력</h2>
-            <textarea id="query" placeholder="쿼리를 입력하세요..."></textarea>
-            <!-- onclick 속성 제거 -->
-            <button id="run-query-btn">쿼리 실행</button> <!-- 이벤트는 script.js에서 처리 -->
-        </div>
+            <div>
+                <h2>쿼리 입력</h2>
+                <textarea id="query" placeholder="select * from users;"></textarea>
+                <!-- onclick 속성 제거 -->
+                <button id="run-query-btn">쿼리 실행</button> <!-- 이벤트는 script.js에서 처리 -->
+          
+            </div>
+            <div>
+                <input type="text" id="user-id-input-1" placeholder="유저 아이디 (ex: 13)">
+                <button id="get-diary-count-btn">일기 수 조회</button>
+            </div>
 
+            <div>
+                <input type="text" id="user-id-input-2" placeholder="유저 아이디 (ex: 13)">
+                <button id="get-diary-btn">일기 조회</button>
+            </div>
+               
+        <button id="download-excel-btn">가장 최근 쿼리 결과 엑셀 다운로드</button>
+
+        </div>
+        
         <!-- 오른쪽: 결과 출력 -->
         <div class="query-result">
             <h2>쿼리 결과</h2>
             <div id="query-result"></div> <!-- 이 부분이 제대로 작성되어 있는지 확인 -->
         </div>
-        
+   
     </div>
 
     <script src="script.js"></script>

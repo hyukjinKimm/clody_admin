@@ -30,10 +30,11 @@ body {
 }
 
 textarea {
-    width: 100%; /* 너비를 100%로 설정 */
-    height: 300px; /* 높이를 300px로 설정하여 더 크게 만듬 */
+    width: 50%; /* 너비를 50%로 설정 */
+    height: 100px; /* 높이를 100px로 설정하여 더 크게 만듬 */
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 700; /* 글씨 굵기를 더 굵게 설정 (700은 굵은 글씨) */
     border-radius: 5px;
     border: 1px solid #ccc;
     resize: vertical; /* 수직으로만 크기 조정 가능 */
@@ -59,6 +60,32 @@ button:hover {
     border-left: 1px solid #ccc;
 }
 
+/* 유저 아이디 입력과 버튼을 위한 스타일 */
+#user-id-input {
+    width: 60%; /* 입력 필드 너비 */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* 버튼과 간격 */
+}
+
+#get-diary-count-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#get-diary-count-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 결과 테이블 스타일 */
 #result-table {
     margin-top: 20px;
     display: block;
